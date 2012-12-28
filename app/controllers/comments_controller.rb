@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+  #set up create method for comments
   def create
   	article_id = params[:comment].delete(:article_id)
 
