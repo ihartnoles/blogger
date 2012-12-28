@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-  	@message = "Sup Peaches"
+  	@heading = 'Create a New Article'
   	@article = Article.new
   end
 
@@ -18,4 +18,16 @@ class ArticlesController < ApplicationController
   	@article.save
   	redirect_to article_path(@article)
   end
+
+  def destroy
+  	@article = Article.find(params[:id])
+  	@article.destroy()
+  	redirect_to article_path(@article)
+  end
+  
+  def edit
+  	@heading = 'Edit an Article'
+  	@article = Article.find(params[:id])
+  end
+
 end
