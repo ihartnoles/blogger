@@ -1,5 +1,5 @@
 <h1><%= @article.title %></h1>
-<!--<p>Tags: <%= tag_links(@article.tags) %></p>-->
+
 
 <% if @article.image.exists? %>
 <p><%= image_tag @article.image.url() %></p>
@@ -13,10 +13,13 @@
 <% end %>
 
 <br>
+
+<% if logged_in? %>
 <%= link_to "edit", edit_article_path(@article) %>
 | 
 <%= link_to "delete", article_path(@article), method: :delete, confirm: "Really delete the article?" %>
 
+<% end %>
 
 <%= render partial: 'comments/form' %>
 

@@ -1,4 +1,8 @@
 class AuthorSessionsController < ApplicationController
+  
+  #before_filter :zero_authors_or_authenticated
+  #before_filter :require_login
+
   def new
   	@author = Author.new
   end
