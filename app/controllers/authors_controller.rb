@@ -17,7 +17,6 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @authors }
-      format.xml  { render xml: @authors }
     end
   end
 
@@ -29,7 +28,7 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @author }
-      format.xml  { render xml: @author }
+      format.xml  {render xml: @author}
     end
   end
 
@@ -41,7 +40,7 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @author }
-      format.xml  { render xml: @author }
+      format.xml  {render xml: @author}
     end
   end
 
